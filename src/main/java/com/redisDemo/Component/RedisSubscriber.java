@@ -15,6 +15,7 @@ public class RedisSubscriber implements MessageListener {
         this.messagingTemplate = messagingTemplate;
     }
 
+    //Method to send message to Frontend websocket
     @Override
     public void onMessage(Message message, byte[] pattern) {
         String payload = message.toString();

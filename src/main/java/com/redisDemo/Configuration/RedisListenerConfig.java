@@ -29,7 +29,7 @@ public class RedisListenerConfig {
         RedisMessageListenerContainer container = new RedisMessageListenerContainer();
         container.setConnectionFactory(factory);
         container.addMessageListener(subscriber,
-                new PatternTopic("socket-channel"));
+                new PatternTopic("ride-events"));
         return container;
     }
 }

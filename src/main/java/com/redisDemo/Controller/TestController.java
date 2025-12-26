@@ -26,6 +26,9 @@ public class TestController {
     @GetMapping("/login")
     public String login(HttpSession session){
         session.setAttribute("user","logged-in");
+
+        // to broadcast to websocket
+        publisher.publish("The session id of login is"+session.getId());
         return "Session ID: " + session.getId();
     }
 

@@ -10,7 +10,7 @@ import org.springframework.web.socket.WebSocketSession;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
-public class AppWebSocketHandler  implements WebSocketHandler {
+public class AppWebSocketHandler implements WebSocketHandler {
 
     public static ConcurrentHashMap<String,WebSocketSession> sessions=new ConcurrentHashMap<>();
 
